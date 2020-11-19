@@ -1,0 +1,26 @@
+{
+  "name": "express-challenge",
+  "version": "1.0.0",
+  "description": "A small coding challenge to implement a full-stack integration with the Google Books API",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pg": "^7.18.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node api/server.js",
+    "postinstall": "cd browser && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/docnetwork/full-stack-challenge.git"
+  },
+  "author": "webteam@docnetwork.org",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/docnetwork/full-stack-challenge/issues"
+  },
+  "homepage": "https://github.com/docnetwork/full-stack-challenge#readme"
+}
