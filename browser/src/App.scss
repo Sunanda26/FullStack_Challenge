@@ -1,0 +1,393 @@
+$public_url: "";
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+// @font-face {
+//   font-family: "Open Sans";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: local("Open Sans"), local("OpenSans"),
+//     url(https://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff)
+//       format("TrueType");
+// }
+@-moz-document url-prefix() {
+  html,
+  body {
+    overflow: auto !important;
+  }
+}
+::-webkit-scrollbar {
+  width: 0px; /* remove scrollbar space */
+  background: transparent; /* optional: just make scrollbar invisible */
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  scrollbar-width: none;
+}
+::-moz-scrollbar {
+  width: 0px;
+  scrollbar-width: none;
+}
+
+// @font-face {
+//   font-family: "OpenSans-Bold";
+//   src: url($public_url + "/fonts/OpenSans-Bold.ttf") format("truetype");
+// }
+
+// @font-face {
+//   font-family: "OpenSans-Italic";
+//   src: url("/fonts/OpenSans-Italic.ttf") format("truetype");
+// }
+
+// @font-face {
+//   font-family: "OpenSans-SemiBold";
+//   src: url("/fonts/OpenSans-SemiBold.ttf") format("truetype");
+// }
+
+// @font-face {
+//   font-family: "OpenSans-Regular";
+//   src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
+// }
+
+// @font-face {
+//   font-family: "OpenSans-Light";
+//   src: url("/fonts/OpenSans-Light.ttf") format("truetype");
+// }
+
+// @font-face {
+//   font-family: "OpenSans-LightItalic";
+//   src: url("/fonts/OpenSans-LightItalic.ttf") format("truetype");
+// }
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dashboard {
+  overflow: hidden;
+  background-color: #fcfeff;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  .header {
+    min-height: 64px;
+    box-shadow: 0px 0px 3px 0px rgba(211, 211, 211, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    .logo {
+      display: flex;
+      align-items: center;
+
+      .logo-text {
+        margin-left: 7px;
+        font-size: 16px;
+        // font-family: ;
+        font-weight: 600;
+      }
+    }
+    .time-zone {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.find-your-books {
+  display: flex;
+  margin: 20px;
+  justify-content: flex-end;
+  .search {
+    input {
+      border: 0px solid gray;
+      padding: 10px 15px;
+      border-bottom: 1px solid rgba(211, 211, 211, 0.6);
+      width: 400px;
+      letter-spacing: 1px;
+    }
+    input:focus {
+      outline: 0px;
+    }
+    button {
+      background: #c2f3d385;
+      border: 1px solid #c2f3d385;
+      padding: 10px 30px;
+      letter-spacing: 1px;
+      font-size: 13px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+.find-your-books-text {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin: 10px 20px;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  .fir {
+    width: 30%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .sec {
+    width: 25%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .thi {
+    width: 20%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fou {
+    width: 15%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fiv {
+    width: 10%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.Table {
+  margin-top: 10px;
+  flex-grow: 1;
+  font-size: 14px;
+  padding: 10px 20px;
+  // margin: 10px 20px;
+  flex-basis: 0;
+  overflow: scroll;
+  .table-body {
+    flex-grow: 1;
+    flex-basis: 0;
+    overflow: scroll;
+  }
+  .table-row {
+    background-color: white;
+
+    display: flex;
+    margin: 7px 0px;
+    min-height: 45px;
+    // border: 1px solid lavender;
+    box-shadow: 0px 0px 3px 0px lavender;
+    .fir {
+      width: 30%;
+      padding: 0px 3px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+    .sec {
+      width: 25%;
+      padding: 0px 3px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+    .thi {
+      width: 20%;
+      padding: 0px 3px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+    .fou {
+      width: 15%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+    .fiv {
+      width: 10%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      justify-content: center;
+    }
+  }
+
+  .expansion-panel {
+    padding: 25px;
+    .more {
+      font-size: 13px;
+      margin: 3px 0px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  }
+}
+
+.TableCard {
+  display: none;
+}
+
+.preview {
+  margin-top: 15px !important;
+}
+.Table-card {
+  display: none;
+}
+
+.commonFont {
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: 200;
+}
+.commonFontValue {
+  font-size: 13px;
+  margin-top: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 1300px) and (min-width: 1024px) {
+  .table-header {
+    font-size: 13px;
+  }
+  .Table {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .table-header {
+    font-size: 13px;
+  }
+  .Table {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .Table-card {
+    display: block;
+    overflow: scroll;
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 20px;
+  }
+  .Table,
+  .table-header {
+    display: none;
+  }
+  .find-your-books {
+    .search {
+      input {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .find-your-books {
+    .search {
+      input {
+        width: 200px;
+      }
+    }
+  }
+  .dashboard {
+    .header {
+      padding: 0px 10px;
+      .logo {
+        img {
+          height: 40px !important;
+        }
+        .logo-text {
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .find-your-books {
+    margin: 10px;
+    margin-top: 20px;
+    justify-content: flex-start;
+    .search {
+      input {
+        flex-grow: 1;
+        flex-basis: 0px;
+        // width: 150px;
+      }
+      button {
+        padding: 7px 10px;
+      }
+    }
+  }
+
+  .dashboard {
+    .header {
+      padding: 0px 10px;
+      .logo {
+        img {
+          height: 35px !important;
+        }
+        .logo-text {
+          font-size: 13px !important;
+        }
+      }
+    }
+  }
+}
